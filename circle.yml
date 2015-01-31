@@ -11,9 +11,11 @@ deployment:
   staging:
     branch: security
     commands:
+      - echo security
       - exit 0
 
   production:
     branch: master
     commands:
-      - exit 1
+      - echo master
+      - exit 0
