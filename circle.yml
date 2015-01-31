@@ -1,0 +1,19 @@
+machine:
+  timezone:
+    Asia/Tokyo
+  ruby:
+    version:
+      2.2.0
+test:
+  override:
+    - exit 0
+deployment:
+  staging:
+    branch: security
+    commands:
+      - exit 0
+
+  production:
+    branch: master
+    commands:
+      - exit 1
