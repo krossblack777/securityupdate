@@ -4,16 +4,15 @@ machine:
   ruby:
     version:
       2.2.0
-test:
-  override:
-    - exit 0
 deployment:
   staging:
     branch: security
     commands:
-      - exit 0
+      - git clone git@github.com:krossblack777/aws-circleci.git
+      - cd aws-circleci
 
   production:
     branch: master
     commands:
-      - exit 1
+      - echo ok
+      - exit 0
