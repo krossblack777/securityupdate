@@ -1,7 +1,7 @@
 require 'octokit'
 
 title = "title test"
-body  = 'body test'
+body  = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabody test'
 
 client = Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
 client.create_pull_request(

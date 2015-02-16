@@ -2,11 +2,10 @@
 
 export BRANCH=bundle-update-$(date -u "+%Y%m%d")
 
-git config --global user.email krossbot@example.com
-git config --global user.name 'krossbot'
-git add Gemfile.lock
-git commit -m '$ bundle update'
-git branch -M $BRANCH
+git config  user.email krossbot@example.com
+git config  user.name 'krossbot'
+git checkout -b $BRANCH
+git commit --allow-empty -m "make pull request"
 git push origin $BRANCH
 
 bundle exec ruby script/create_pr.rb
