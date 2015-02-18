@@ -6,7 +6,7 @@ machine:
       2.2.0
 test:
   override:
-    - sh create_pr_contrloller.sh
+    - sh create_pr_controller.sh
 #deployment:
 #  staging:
 #    branch: security
