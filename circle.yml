@@ -6,16 +6,16 @@ machine:
       2.2.0
 test:
   override:
-    - sh create_pr_controller.sh
-#deployment:
-#  staging:
-#    branch: security
-#    commands:
-#      - echo security
-#      - exit 0
-#
-#  production:
-#    branch: master
-#    commands:
-#      - echo master
-#      - exit 0
+    - echo test
+deployment:
+  staging:
+    branch: security
+    commands:
+      - sh create_pr_controller.sh
+      - exit 0
+
+  production:
+    branch: master
+    commands:
+      - echo master
+      - exit 0
